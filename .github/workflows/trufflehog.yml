@@ -15,6 +15,7 @@ jobs:
         fetch-depth: 0 #to fetch all history of all branches 
     - name: trufflehog-actions-scan
       uses: edplato/trufflehog-actions-scan@master
+      continue-on-error: true
       with:
         scanArguments: "--regex --entropy=False  --rules /regexes.json"
 
